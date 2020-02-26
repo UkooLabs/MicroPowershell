@@ -6,7 +6,8 @@ $files = @("micro.exe", "settings.json")
 foreach ($file in $files) 
 {
   $url = "https://github.com/UkooLabs/MicroPowershell/blob/master/$file?raw=true" 
-  curl $url -outfile (Join-Path $installPath $file)
+  $outFile = (Join-Path $installPath $file)
+  curl $url -outfile $outFile
 }
 
 $regexInstallPath = [regex]::Escape($installPath)
