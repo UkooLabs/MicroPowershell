@@ -6,6 +6,7 @@ $files = @("micro.exe", "settings.json")
 foreach ($file in $files) 
 {
   $url = "https://github.com/UkooLabs/MicroPowershell/blob/master/$file?raw=true" 
+  Write-Output "$url"
   $outFile = (Join-Path $installPath $file)
   curl $url -outfile $outFile
 }
