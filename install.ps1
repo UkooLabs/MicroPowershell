@@ -15,4 +15,3 @@ foreach ($file in $files)
 $regexInstallPath = [regex]::Escape($installPath)
 $pathArray = $env:Path -split ';' | Where-Object {$_ -notMatch "^$regexInstallPath\\?"}
 $env:Path = ($pathArray + $installPath) -join ';'
-
