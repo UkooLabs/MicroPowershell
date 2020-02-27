@@ -5,7 +5,7 @@ New-Item -ItemType Directory -Force -Path $installPath
 $files = @("micro.exe", "settings.json")
 foreach ($file in $files) 
 {
-  $url = "https://github.com/UkooLabs/MicroPowershell/blob/master/$file?raw=true" 
+  $url = 'https://github.com/UkooLabs/MicroPowershell/blob/master/' + $file + '?raw=true' 
   Write-Output "$url"
   $outFile = (Join-Path $installPath $file)
   curl $url -outfile $outFile
