@@ -1,4 +1,4 @@
-$installPath = (Join-Path $env:ProgramData "micro")
+$installPath = (Join-Path $env:ProgramData 'micro')
 
 New-Item -ItemType Directory -Force -Path $installPath | Out-Null
 
